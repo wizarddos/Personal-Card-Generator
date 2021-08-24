@@ -1,36 +1,35 @@
 import React from 'react'
 import { Data } from '../App'
-import bootsrap from 'react-bootstrap'
+import "bootstrap";
 
-interface formProps {
-    createCard(arg: any): void,
+
+interface dataFormProps{
+    createCard: ()=>void
 }
 
-
-export default function DataForm({ createCard = f => f }: formProps){
-
-    //contexts 
-    /*const { name, setName } = useContext(DataContext);
-    const { country, setCountry} = useContext(DataContext);
-    const { age, setAge} = useContext(DataContext);
-    const { adress, setAdress} = useContext(DataContext);*/
+export default function DataForm({ createCard = () => {} }: dataFormProps){
 
     const dataProceed = (e: any) =>{
+        e.preventDefault();
         Data.name = (document.getElementById('name') as HTMLInputElement).value;
-        Data.country = (document.getElementById('country') as HTMLInputElement).value;
-        Data.age = (document.getElementById('age') as HTMLInputElement).value;
-        Data.adress = (document.getElementById('adress') as HTMLInputElement).value;
-        createCard(Data);
+        Data.about = (document.getElementById('about') as HTMLInputElement).value;
+        createCard();
     }
 
 
     return(
-        <form onSubmit = { dataProceed }>
-            <input type="text"   id = "name"  />
-            <input type="text"  id = "country" />
-            <input type="number" id="age" />
-            <input type="text" id = "adress"/>
-            <button type="submit">stwórz kartę</button>
-        </form>
+        <div className = "data-form ">
+            <form onSubmit = { dataProceed } >
+                <fieldset>
+                    <legend>Opowiedz coś o sobie</legend>
+                    <label htmlFor = "name" className =  "form-label">Jak masz na imię?</label>
+                    <input type="text" className = "form-control"  id = "name"  /><br/><br/>
+
+                    <label htmlFor = "about" className =  "form-label">Opowiedz coś o sobie</label>
+                    <textarea className = "form-control" id = "about" /><br/><br/>
+                    <button type="submit" className = "btn btn-primary">stwórz kartę</button>
+                </fieldset>
+            </form>
+        </div>
     )
 }
