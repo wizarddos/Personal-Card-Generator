@@ -21,5 +21,26 @@
 
 .card-panel{
   width: 50%;
-  text-align: center;
+  height: 45em;
+  align-content: center;
+  justify-content: center;
+}
+
+@media (max-width: 600px){
+  .content{
+    display: block;
+  }
+  .data-form{
+    width: 100%;
+  }
+  
+  .card-panel{
+    width: 100%;
+  }
+
+  .App{
+    padding: 2%;
+    background-color: rgb(48, 47, 47);
+  }
+
 }

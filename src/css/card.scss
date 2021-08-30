@@ -1,0 +1,297 @@
+$font-color: #000;
+$font-style: 'Rubik', sans-serif;
+@mixin defalutValues() {
+    width: 70%;
+    height: 100%;
+    margin: 2%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 2%;
+}
+
+@mixin flexTemplate {
+    height: 100%;
+    padding: 2%;
+    width: 50%;
+    border-radius: 2% ;
+}
+
+
+.flexCard{
+    display: flex;
+    height: 100%;
+}
+
+.flexRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    word-spacing: 2%;
+    background-color: transparent;
+    padding: 2%;
+}
+
+.pic{
+    width: 15%;
+    height: 15%;
+}
+
+.huge-p{
+    font-size: 2rem;
+    background-color: transparent;
+}
+
+.icon{
+    background-color: transparent;
+    font-size: 10rem;
+}
+
+.icon-9{
+    background-color: transparent;
+    font-size: 4rem;
+}
+
+//dark themes
+.firstHalf-dark{
+    @include flexTemplate();
+    background-color: #222;
+}
+.secondHalf-dark{
+    @include flexTemplate();
+    background-color: #59C3C3;
+}
+
+.firstHalf-dark-2{
+    @include flexTemplate();
+    background-color: #444;
+}
+.secondHalf-dark-2{
+    @include flexTemplate();
+    background-color: #F2DDA4;
+    color:#000;
+}
+
+.dark{
+    @include defalutValues();
+    background-image:  linear-gradient(150deg, rgb(219, 204, 204), #000);
+    padding: 2%;
+    font-family: $font-style;
+}
+.dark-1{
+    @extend .dark;
+    background-image:  linear-gradient(150deg, #59C3C3, #222222);
+}
+
+.dark-2{
+    @extend .dark;
+    padding: 5%;
+    background-image:  linear-gradient(20deg, #333333, #DBFE87);
+}
+
+.dark-3{
+    @extend .dark;
+    background-image: linear-gradient(90deg, #BFD7B5, #444444 );
+}
+
+.dark-4{
+    @extend .dark;
+    background-color: rgba(90, 184, 13, 0.363);
+    background-image: linear-gradient(100deg,  #32322C, rgba(90, 184, 13, 0.363));
+}
+
+.dark-5{
+    @extend .dark;
+    background-image: linear-gradient(100deg,  #32322C, rgba(90, 184, 13, 0.363));
+}
+
+.dark-6{
+    @extend .dark;
+    background-image: linear-gradient(50deg, #4C4C47, #848FA5);
+}
+
+.dark-7{
+    @extend .dark;
+    background-image: linear-gradient(40deg, #264653, #E76F51);
+}
+
+.dark-8{
+    @extend .dark;
+    background-image: linear-gradient(50deg, #424B54, #CC5803);
+}
+
+.dark-9{
+    @extend .dark;
+    padding-top: 2% ;
+    background-image: linear-gradient(180deg, #252422, #B1CF5F);
+}
+
+.half{
+    width: 50%;
+    background-color: transparent;
+    padding: 2%;
+}
+
+.p-dark{
+    background-color: transparent;
+}
+
+.p-dark-3{
+    @extend.p-dark;
+    color: $font-color;
+}
+
+.p-dark-4{
+    @extend .p-dark;
+    font-size: 150%;
+}
+
+.header-dark{
+    background-color: transparent;
+}
+
+.h2-dark-2{
+    border-radius: 5%;
+    padding: 2%;
+    background-color: transparent;
+}
+
+.header-dark-4{
+    @extend .header-dark;
+    font-size: xx-large;
+}
+
+.ul-dark{
+    background-color: transparent;
+    list-style-type: none;
+   
+}
+
+.li-dark{
+    background-color: transparent;
+    font-size: x-large;
+    text-align: center;
+}
+
+
+.li-dark-7{
+    font-size: medium;
+}
+
+//light themes
+.light{
+    @include defalutValues();
+    background-image: linear-gradient(150deg, #fff, #999);
+    color: $font-color;
+    font-family: $font-style;
+    padding: 1%;
+}
+
+.light-1{
+    @extend .light;
+    
+}
+
+.light-2{
+    @extend .light;
+    padding: 5%;
+    background-image:  linear-gradient(20deg, #DDDDDD, #0C7C59);
+}
+
+.light-3{
+    @extend .light;
+    background-image: linear-gradient(200deg, #EEF0F2, #C2E812)
+}
+
+.light-4{
+    @extend .light;
+    background-image: linear-gradient(200deg, #F2F7F2, #BBBE64)
+}
+
+.light-5{
+    @extend .light;
+    background-image: linear-gradient(200deg, rgb(207, 205, 205), #444);
+}
+
+.light-6{
+    @extend .light;
+    background-image: linear-gradient(200deg, #6C91C2, #C3C9E9);
+}
+
+.light-7{
+    @extend .light;
+    background-image: linear-gradient(40deg, #C5BAAF, #B38D97);
+}
+
+.light-8{
+    @extend .light;
+    background-image: linear-gradient(50deg, #EBF2FA, #A5BE00);
+}
+
+.light-9{
+    padding-top: 2% ;
+    @extend .light;
+    background-image: linear-gradient(50deg, #48E5C2, #FCFAF9);
+}
+
+.firstHalf-light{
+    @include flexTemplate();
+    background-color: rgb(216, 216, 216);
+}
+.secondHalf-light{
+    @include flexTemplate();
+    background-color: rgb(255, 255, 255);
+}
+
+
+.p-light{
+    background-color: transparent;
+    color: $font-color;
+}
+
+.p-light-3{
+    @extend .p-light;
+    font-style: italic;
+}
+
+.header-light{
+    background-color: transparent;
+    color: $font-color;
+}
+
+.header-light-4{
+    background-color: transparent;
+    color: $font-color;
+}
+
+.h2-light-2{
+    background-color: transparent;
+}
+
+.p-light-4{
+    font-size: xx-large;
+    background-color: transparent;
+    color: $font-color;
+}
+
+.ul-light{
+    background-color: transparent;
+    list-style-type: none;
+   
+}
+
+.li-light{
+    background-color: transparent;
+    font-size: x-large;
+    text-align: center;
+}
+
+@media (max-width: 600px){
+    .dark{
+        width: 100%;
+    }
+
+    .light{
+        width: 100%;
+    }
+}
